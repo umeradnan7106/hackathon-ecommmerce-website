@@ -2,20 +2,141 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.navButton{
+  padding: 10px;
+  font-size: 11px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.hoverUnderline{
+  font-weight: 500;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.hoverUnderline:hover {
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.button{
+  background-color: #111111;
+  color: white;
+  padding: 10px 30px;
+  margin: 5px;
+  border-radius: 999px;
+}
+
+.footerText{
+  text-transform: uppercase;
+  font-size: 10px;
+  color: white;
+  padding: 10px 0px;
+}
+
+.footerText2{
+  font-size: 12px;
+  color: #7E7E7E;
+  padding: 10px 0px;
+  font-weight: 400;
+}
+
+.footerText3{
+  font-size: 12px;
+  color: #7E7E7E;
+  padding: 0px 10px;
+  font-weight: 400;
+}
+
+.essentialImage{
+  width: 440px;
+  height: 540px;
+}
+
+.essentialButton{
+  background-color: white;
+  color: #111111;
+  padding: 10px 20px;
+  border-radius: 999px;
+}
+
+.fontHead{
+  font-size: 15px;
+  color: #111111;
+  padding: 15px 0px;
+  font-weight: 500;
+}
+
+.fontText{
+  font-weight: 500;
+  font-size: 15px;
+  color: #7E7E7E;
+  padding: 5px 0px;
+}
+
+/* .bestSellingBox {
+  width: 441px;
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+
+.bestSellingBox:hover {
+  transform: translateY(-5px);
+}
+
+.addToCartOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 1);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.bestSellingBox:hover .addToCartOverlay {
+  opacity: 1;
+} */
+
+.bestSellingBox {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.bestSellingBox:hover {
+  transform: translateY(-5px);
+}
+
+.addToCartOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 1);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.bestSellingBox:hover .addToCartOverlay {
+  opacity: 1;
 }
