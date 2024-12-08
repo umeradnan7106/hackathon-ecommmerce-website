@@ -77,7 +77,7 @@ export default function Joinus() {
             </label>
         <div className="text-[#8D8D8D] text-[11px]">Sign up for emails to get updates from Nike on <br />products, offers and your Member benefits</div>
         </div>
-        <div className="text-[#8D8D8D] text-[11px] text-center py-4">By creating an account, you agree to Nike's <span className="underline">Privacy <br /> Policy</span> and <span className="underline">Terms of Use</span>.</div>
+        <div className="text-[#8D8D8D] text-[11px] text-center py-4">{`By creating an account, you agree to Nike's`} <span className="underline">Privacy <br /> Policy</span> and <span className="underline">Terms of Use</span>.</div>
         
         
         <div className="bg-[#000000] text-white py-4 text-center my-4 rounded cursor-pointer">JOIN US</div>

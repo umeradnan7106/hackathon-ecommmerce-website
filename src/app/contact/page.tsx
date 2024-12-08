@@ -41,8 +41,8 @@ export default function Contact() {
             WHAT PAYMENT OPTIONS CAN I USE ON NIKE ORDERS?
           </div>
           <div>
-            We want to make buying your favourite Nike shoes and gear online
-            fast and easy, and we accept the following payment options:
+            {`We want to make buying your favourite Nike shoes and gear online
+            fast and easy, and we accept the following payment options:`}
           </div>
 
           <div className="p-5">
@@ -51,8 +51,8 @@ export default function Contact() {
               Electron, Maestro
             </div>
             <div className="py-3">
-              If you enter your PAN information at checkout, you'll be able to
-              pay for your order with PayTM or a local credit or debit card.
+              {`If you enter your PAN information at checkout, you'll be able to
+              pay for your order with PayTM or a local credit or debit card.`}
             </div>
             <div>Apple Pay</div>
           </div>
@@ -61,8 +61,8 @@ export default function Contact() {
             <span className="font-semibold underline cursor-pointer">
               Nike Members
             </span>{" "}
-            can store multiple debit or credit cards in their profile for faster
-            checkout. If you're not already a Member,{" "}
+            {`can store multiple debit or credit cards in their profile for faster
+            checkout. If you're not already a Member,`}{" "}
             <span className="font-medium underline">
               <Link href="/join">join us </Link>
             </span>
@@ -92,8 +92,8 @@ export default function Contact() {
             Can I pay for my order with multiple methods?
           </div>
           <div className="py-1">
-            No, payment for Nike orders can't be split between multiple payment
-            methods.
+            {`No, payment for Nike orders can't be split between multiple payment
+            methods.`}
           </div>
 
           <div className="font-bold pt-3">
@@ -104,14 +104,14 @@ export default function Contact() {
           </div>
 
           <div className="font-bold pt-3">
-            Why don't I see Apple Pay as an option?
+            {`Why don't I see Apple Pay as an option?`}
           </div>
           <div className="py-1">
-            To see Apple Pay as an option in the Nike App or on Nike.com, you'll
+            {`To see Apple Pay as an option in the Nike App or on Nike.com, you'll
             need to use a compatible Apple device running the latest OS, be
             signed in to your iCloud account and have a supported card in your
             Wallet. Additionally, you'll need to use Safari to use Apple Pay on
-            Nike.com.
+            Nike.com.`}
           </div>
 
           <div className="pt-6">Was this answer helpful?</div>
@@ -123,7 +123,7 @@ export default function Contact() {
 
           <div className="p-5">
             <div className="font-semibold underline cursor-pointer py-2">
-              WHAT ARE NIKE'S DELIVERY OPTIONS?
+              {`WHAT ARE NIKE'S DELIVERY OPTIONS?`}
             </div>
             <div className="font-semibold underline cursor-pointer">
               HOW DO I GET FREE DELIVERY ON NIKE ORDERS?
@@ -152,7 +152,7 @@ export default function Contact() {
           <div className="py-8">
             <Image src={mail} alt="email"></Image>
           </div>
-          <div className="font-semibold py-1">We'll reply within</div>
+          <div className="font-semibold py-1">{`We'll reply within`}</div>
           <div>five business days</div>
 
           <div className="py-8">

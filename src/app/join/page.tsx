@@ -48,7 +48,7 @@ export default function Joinus() {
               <div className="text-[#BCBCBC] text-[12px]">Forgotten your password?</div>
           </div>
           
-          <div className="text-[#8D8D8D] text-[11px] text-center py-4">By logging in, you agree to Nike's <span className="underline">Privacy <br /> Policy</span> and <span className="underline">Terms of Use</span>.</div>
+          <div className="text-[#8D8D8D] text-[11px] text-center py-4">{`By logging in, you agree to Nike's`} <span className="underline">Privacy <br /> Policy</span> and <span className="underline">Terms of Use</span>.</div>
 
           <div className="bg-[#000000] text-white py-4 text-center my-4 rounded cursor-pointer">SIGN IN</div>
           <div className="text-[#8D8D8D] text-center text-[11px]">Not a Member? <span className="underline text-black"><Link href="/login">Join Us</Link>.</span></div>

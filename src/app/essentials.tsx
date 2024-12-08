@@ -18,7 +18,7 @@ export default function Essentials() {
                 alt="menImage"
                 className="essentialImage"
               ></Image>
-              <div className="essentialButton">Men's</div>
+              <div className="essentialButton">{`Men's`}</div>
             </div>
             <div>
               <Image
@@ -26,7 +26,7 @@ export default function Essentials() {
                 alt="womenImage"
                 className="essentialImage"
               ></Image>
-              <div className="essentialButton">Women's</div>
+              <div className="essentialButton">{`Women's`}</div>
             </div>
             <div>
               <Image
@@ -34,7 +34,7 @@ export default function Essentials() {
                 alt="kidImage"
                 className="essentialImage"
               ></Image>
-              <div className="essentialButton">Kid's</div>
+              <div className="essentialButton">{`Kid's`}</div>
             </div>
           </div>
 
@@ -64,11 +64,11 @@ export default function Essentials() {
             </div>
 
             <div>
-              <div className="fontHead">Kids'</div>
+              <div className="fontHead">{`Kids'`}</div>
               <div className="fontText">Infant & Toddler Shoes</div>
-              <div className="fontText">Kids' Shoes</div>
-              <div className="fontText">Kids' Jordan Shoes</div>
-              <div className="fontText">Kids' Basketball Shoes</div>
+              <div className="fontText">{`Kids'`} Shoes</div>
+              <div className="fontText">{`Kids'`} Jordan Shoes</div>
+              <div className="fontText">{`Kids'`} Basketball Shoes</div>
             </div>
           </div>
         </div>
