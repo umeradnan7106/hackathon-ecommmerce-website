@@ -44,8 +44,8 @@ import downArrow from "../../../public/image/down-arrow.png";
 import filter from "../../../public/image/filter.png";
 
 // Import images for the cards (you can add more images as needed)
-import shoe1 from "../../../public/image/shoe1.png";
-import shoe2 from "../../../public/image/shoe2.png";
+// import shoe1 from "../../../public/image/shoe1.png";
+// import shoe2 from "../../../public/image/shoe2.png";
 
 const productData = [
   {
