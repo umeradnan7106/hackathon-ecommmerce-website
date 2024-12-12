@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <>
       <div className="bg-[#E5E5E5]">
-        <div className="max-w-[1345] mx-auto">
+        <div className="max-w-[1440] mx-auto">
           <div className="flex justify-between items-center py-1 ">
             <Image src={basket} alt="basket Logo"></Image>
             <div className="flex items-center">
@@ -33,7 +33,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="max-w-[1345] mx-auto">
+      <div className="max-w-[1440] mx-auto">
         <div className="flex items-center justify-between mx-auto bg-white">
           <Image src={Logo} alt="Logo"></Image>
 

@@ -10,7 +10,7 @@ export default function Footer() {
     <>
     <div className="pt-20">
       <div className="bg-[#111111]">
-      <div className="max-w-[1345] mx-auto py-5">
+      <div className="max-w-[1440px] mx-auto py-5">
         <div className="flex justify-between py-10">
           <div className="flex gap-24">
             <div>
