@@ -327,7 +327,7 @@ export default function AllProducts() {
 
             {/* responsive */}
 
-            <Sheet>
+            {/* <Sheet>
               <SheetTrigger className="block lg:hidden">Open</SheetTrigger>
               <SheetContent side={"left"}>
                 <SheetHeader>
@@ -400,7 +400,7 @@ export default function AllProducts() {
                   </SheetDescription>
                 </SheetHeader>
               </SheetContent>
-            </Sheet>
+            </Sheet> */}
 
 
           </div>
