@@ -7,12 +7,17 @@ import location from "../../public/image/location.png";
 
 export default function Footer() {
   return (
+    
+// flex-wrap: wrap;
+// justify-content: center;
+// gap: 0.5rem;
     <>
+    
     <div className="pt-20">
       <div className="bg-[#111111]">
       <div className="max-w-[1440px] mx-auto py-5">
-        <div className="flex justify-between py-10">
-          <div className="flex gap-24">
+        <div className="flex sm:justify-between py-10 flex-wrap justify-center gap-2">
+          <div className="flex gap-2 sm:gap-24">
             <div>
               <div className="footerText">Find A Store</div>
               <div className="footerText">become a member</div>
@@ -52,7 +57,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex justify-between py-3">
+        <div className="flex sm:justify-between py-3 flex-wrap justify-center gap-2">
           <div className="flex h-4 items-center">
             <Image src={location} alt="location"></Image>
             <div className="footerText">India</div>
@@ -74,3 +79,4 @@ export default function Footer() {
     </>
   );
 }
+

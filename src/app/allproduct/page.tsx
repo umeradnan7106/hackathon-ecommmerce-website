@@ -5,7 +5,17 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
+
 import { Checkbox } from "@/components/ui/checkbox";
+import { Primitive } from "@radix-ui/react-primitive";
 
 import Image from "next/image";
 import Header from "../header";
@@ -296,17 +306,17 @@ export default function AllProducts() {
       <Header />
       <div className="max-w-[1440px] mx-auto">
         <div className="flex items-center justify-between py-6">
-          <div className="font-medium text-[24px]">{`New(500)`}</div>
-          <div className="flex items-center gap-8">
-            <div className="flex">
+          <div className="font-medium sm:text-[24px] text-[18px]">{`New(500)`}</div>
+          <div className="flex items-center sm:gap-8 gap-2">
+            <div className="flex items-center text-[14px] sm:text-[18px]">
               Hide Filters{" "}
               <Image
                 src={filter}
                 alt="filter"
-                className="w-[24px] h-[24px] ml-1"
+                className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] ml-1"
               ></Image>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center text-[14px] sm:text-[18px]">
               Sort By{" "}
               <Image
                 src={downArrow}
@@ -314,11 +324,92 @@ export default function AllProducts() {
                 className="w-[14px] h-[14px] mt-1 ml-1"
               ></Image>
             </div>
+
+            {/* responsive */}
+
+            <Sheet>
+              <SheetTrigger className="block lg:hidden">Open</SheetTrigger>
+              <SheetContent side={"left"}>
+                <SheetHeader>
+                  <SheetTitle>All Products Name</SheetTitle>
+
+                  <SheetDescription>
+                  <Primitive.div id="radix-:Rec..." className="text-sm te..." ref={null}>
+                    <div className="text-sm text-gray-600">
+                      <div className="flex">
+                        <div className="w-[192px]">
+                          <div className="border-b border-b-gray-300 pb-6">
+                            <div className="sidebar">Shoes</div>
+                            <div className="sidebar">Sports Bras</div>
+                            <div className="sidebar">Tops & T-Shirts</div>
+                            <div className="sidebar">Hoodies & Sweatshirts</div>
+                            <div className="sidebar">Jackets</div>
+                            <div className="sidebar">Trousers & Tights</div>
+                            <div className="sidebar">Shorts</div>
+                            <div className="sidebar">Tracksuits</div>
+                            <div className="sidebar">Jumpsuits & Rompers</div>
+                            <div className="sidebar">Skirts & Dresses</div>
+                            <div className="sidebar">Socks</div>
+                            <div className="sidebar">
+                              Accessories & Equipment
+                            </div>
+                          </div>
+
+                          <Accordion type="single" collapsible>
+                            <AccordionItem value="item-1">
+                              <AccordionTrigger>Gender</AccordionTrigger>
+                              <AccordionContent>
+                              <p><Checkbox />Men</p>
+                              </AccordionContent>
+                              <AccordionContent>
+                              <p><Checkbox />Women</p>
+                              </AccordionContent>
+                              <AccordionContent>
+                              <p><Checkbox /> Unisex</p>
+                              </AccordionContent>
+                            </AccordionItem>
+                          </Accordion>
+
+                          <Accordion type="single" collapsible>
+                            <AccordionItem value="item-1">
+                              <AccordionTrigger>Kids</AccordionTrigger>
+                              <AccordionContent>
+                                <p><Checkbox /> Boys</p>
+                              </AccordionContent>
+                              <AccordionContent>
+                                <p><Checkbox /> Girls</p>
+                              </AccordionContent>
+                            </AccordionItem>
+                          </Accordion>
+
+                          <Accordion type="single" collapsible>
+                            <AccordionItem value="item-1">
+                              <AccordionTrigger>Shop By Price</AccordionTrigger>
+                              <AccordionContent>
+                                <p><Checkbox /> Under ₹ 2 500.00</p>
+                              </AccordionContent>
+                              <AccordionContent>
+                                <p><Checkbox /> ₹ 2 501.00 - ₹ 7 500.00</p>
+                              </AccordionContent>
+                            </AccordionItem>
+                          </Accordion>
+                        </div>
+                      </div>
+                    </div>
+                    </Primitive.div>
+                  </SheetDescription>
+                </SheetHeader>
+              </SheetContent>
+            </Sheet>
+
+
           </div>
         </div>
 
-        <div className="flex justify-between">
-          <div className="w-[192px] ">
+        {/* sidebar */}
+
+        <div className="flex justify-between ">
+          <div className="w-[192px] hidden lg:block">
             <div className="border-b border-b-gray-300 pb-6">
               <div className="sidebar">Shoes</div>
               <div className="sidebar">Sports Bras</div>
@@ -378,8 +469,10 @@ export default function AllProducts() {
             </div>
           </div>
 
+          {/* Products */}
+
           <div className="w-[1092px] py-5">
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 justify-center">
               {productData.map((product, index) => (
                 <div key={index} className="w-[348px]">
                   <div>
@@ -430,10 +523,8 @@ export default function AllProducts() {
           </div>
         </div>
       </div>
-      
 
       <Footer />
     </>
   );
 }
-

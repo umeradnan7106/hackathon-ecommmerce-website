@@ -11,7 +11,7 @@ export default function Essentials() {
           <div className="text-[23px] text-[#111111] font-medium py-4">
             The Essential
           </div>
-          <div className="flex justify-between">
+          <div className="flex flex-wrap gap-2 justify-center">
             <div>
               <Image
                 src={menImage}
@@ -28,6 +28,7 @@ export default function Essentials() {
               ></Image>
               <div className="essentialButton">{`Women's`}</div>
             </div>
+
             <div>
               <Image
                 src={kidImage}
@@ -38,37 +39,41 @@ export default function Essentials() {
             </div>
           </div>
 
-          <div className="flex justify-center gap-36 pt-10">
-            <div>
-              <div className="fontHead">Icons</div>
-              <div className="fontText">Air Force 1</div>
-              <div className="fontText">Huarache</div>
-              <div className="fontText">Air Max 90</div>
-              <div className="fontText">Air Max 95</div>
+          <div className="flex justify-center gap-6 pt-10 lg:gap-36">
+            <div className="flex flex-wrap gap-6 lg:gap-36 justify-center">
+              <div>
+                <div className="fontHead">Icons</div>
+                <div className="fontText">Air Force 1</div>
+                <div className="fontText">Huarache</div>
+                <div className="fontText">Air Max 90</div>
+                <div className="fontText">Air Max 95</div>
+              </div>
+
+              <div>
+                <div className="fontHead">Shoes</div>
+                <div className="fontText">All Shoes</div>
+                <div className="fontText">Custom Shoes</div>
+                <div className="fontText">Jordan Shoes</div>
+                <div className="fontText">Running Shoes</div>
+              </div>
             </div>
 
+            <div className="flex flex-wrap gap-6 lg:gap-36">
             <div>
-              <div className="fontHead">Shoes</div>
-              <div className="fontText">All Shoes</div>
-              <div className="fontText">Custom Shoes</div>
-              <div className="fontText">Jordan Shoes</div>
-              <div className="fontText">Running Shoes</div>
-            </div>
+                <div className="fontHead">Clothing</div>
+                <div className="fontText">All Clothing</div>
+                <div className="fontText">Modest Wear</div>
+                <div className="fontText">Hoodies & Pullovers</div>
+                <div className="fontText">Shirts & Tops</div>
+              </div>
 
-            <div>
-              <div className="fontHead">Clothing</div>
-              <div className="fontText">All Clothing</div>
-              <div className="fontText">Modest Wear</div>
-              <div className="fontText">Hoodies & Pullovers</div>
-              <div className="fontText">Shirts & Tops</div>
-            </div>
-
-            <div>
-              <div className="fontHead">{`Kids'`}</div>
-              <div className="fontText">Infant & Toddler Shoes</div>
-              <div className="fontText">{`Kids'`} Shoes</div>
-              <div className="fontText">{`Kids'`} Jordan Shoes</div>
-              <div className="fontText">{`Kids'`} Basketball Shoes</div>
+              <div>
+                <div className="fontHead">{`Kids'`}</div>
+                <div className="fontText">Infant & Toddler Shoes</div>
+                <div className="fontText">{`Kids'`} Shoes</div>
+                <div className="fontText">{`Kids'`} Jordan Shoes</div>
+                <div className="fontText">{`Kids'`} Basketball Shoes</div>
+              </div>
             </div>
           </div>
         </div>

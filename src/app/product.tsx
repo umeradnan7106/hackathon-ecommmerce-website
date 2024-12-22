@@ -50,20 +50,20 @@ export default function Product() {
     <div className="max-w-[1345px] mx-auto py-5">
       {/* Header */}
       <div className="flex justify-between py-8">
-        <div className="text-[22px] font-medium py-4">Best of Air Max</div>
+        <div className="text-[18px] sm:text-[22px] font-medium py-4">Best of Air Max</div>
         <div className="flex gap-2 items-center">
           <div>Shop</div>
           {/* Arrows */}
           <Image
             src={arrow}
             alt="Previous"
-            className="cursor-pointer rotate-180"
+            className="cursor-pointer rotate-180 w-8 sm:w-12"
             onClick={handlePrev}
           />
           <Image
             src={arrow}
             alt="Next"
-            className="cursor-pointer"
+            className="cursor-pointer w-8 sm:w-12"
             onClick={handleNext}
           />
         </div>
@@ -74,16 +74,16 @@ export default function Product() {
         <div
           className="flex transition-transform duration-500"
           style={{
-            transform: `translateX(-${currentIndex * (440 + 15)}px)`,
-            gap: "15px",
-            width: `${cards.length * (440 + 15)}px`,
+            transform: `translateX(-${currentIndex * (370 + 15)}px)`,
+            gap: "20px",
+            width: `${cards.length * (370 + 15)}px`,
           }}
         >
           {cards.map((card, index) => (
             <div
               key={index}
               className="flex-shrink-0"
-              style={{ width: "440px" }}
+              style={{ width: "370px" }}
             >
               <div className="bestSellingBox">
                 <div className="addToCartOverlay">View Full Details</div>

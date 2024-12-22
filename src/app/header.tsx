@@ -1,9 +1,18 @@
 import Image from "next/image";
+import {
+  Sheet,
+  SheetContent,
+  // SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import basket from "../../public/image/Frame (1).png";
 import Logo from "../../public/image/Frame.png";
 import heart from "../../public/image/Auto Layout Horizontal (1).png";
 import shop from "../../public/image/Auto Layout Horizontal (2).png";
 import searchIcon from "../../public/image/Auto Layout Horizontal.png";
+import hamburger from "../../public/image/3844437_hamburger_list_menu_more_navigation_icon.png";
 import Link from "next/link";
 
 export default function Header() {
@@ -33,11 +42,12 @@ export default function Header() {
           </div>
         </div>
       </div>
+
       <div className="max-w-[1440] mx-auto">
         <div className="flex items-center justify-between mx-auto bg-white">
           <Image src={Logo} alt="Logo"></Image>
 
-          <div className="flex space-x-7">
+          <div className="sm:flex space-x-7 lg:ml-[160px] hidden ">
             <div className="hoverUnderline">
               <Link href="/allproduct">New & Featured</Link>
             </div>
@@ -56,7 +66,7 @@ export default function Header() {
           </div>
 
           <div className="flex items-center gap-2">
-            <div>
+            <div className="hidden lg:block">
               <label className="relative block w-40">
                 <span className="absolute flex items-center">
                   <Image
@@ -77,6 +87,41 @@ export default function Header() {
 
             <Image src={heart} alt="heart" className="w-8"></Image>
             <Image src={shop} alt="shop" className="w-8"></Image>
+            <div className="sm:hidden">
+            <Sheet>
+              <SheetTrigger>
+                <Image
+                  src={hamburger}
+                  alt="hamburger"
+                  width={20}
+                  className="mr-1"
+                ></Image>
+              </SheetTrigger>
+              <SheetContent>
+                <SheetHeader>
+                  <SheetTitle>Product Information </SheetTitle>
+                </SheetHeader>
+                 
+                    <div className="flex flex-col gap-5 mt-5 text-gray-600">
+                      <div className="hoverUnderline">
+                        <Link href="/allproduct">New & Featured</Link>
+                      </div>
+                      <div className="hoverUnderline">
+                        <Link href="/allproduct">Men</Link>
+                      </div>
+                      <div className="hoverUnderline">
+                        <Link href="/allproduct">Women</Link>
+                      </div>
+                      <div className="hoverUnderline">
+                        <Link href="/allproduct">Sale</Link>
+                      </div>
+                      <div className="hoverUnderline">
+                        <Link href="/allproduct">SNKRS</Link>
+                      </div>
+                    </div>
+              </SheetContent>
+            </Sheet>
+            </div>
           </div>
         </div>
       </div>
