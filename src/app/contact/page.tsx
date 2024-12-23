@@ -17,7 +17,7 @@ export default function Contact() {
       <div className="justify-items-center">
         <div className="text-[32px] font-medium py-3">GET HELP</div>
         <div>
-          <label className="relative block w-96">
+          <label className="relative block w-[22.5rem]">
             <input
               className="placeholder:normal-case placeholder:text-slate-400 block w-full border border-black rounded py-3 pr-3 shadow-sm focus:outline-none focus:border-gray-500 focus:ring-gray-500 focus:ring-1 sm:text-sm pl-2"
               placeholder="What we can help you with?"
@@ -35,9 +35,10 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="flex py-10 max-w-[1310px] justify-between mx-auto">
+      <div className="flex py-10 max-w-[1310px] lg:justify-between mx-auto flex-wrap justify-center">
+        
         <div className="max-w-[925px] border-r border-r-gray-400">
-          <div className="font-medium text-[28px] py-7">
+          <div className="font-medium text-[20px] sm:text-[28px] py-7">
             WHAT PAYMENT OPTIONS CAN I USE ON NIKE ORDERS?
           </div>
           <div>
@@ -68,10 +69,10 @@ export default function Contact() {
             </span>
             today.
           </div>
-          <button className="button">
+          <button className="button text-sm sm:text-base">
             <Link href="/join">JOIN US</Link>
           </button>
-          <button className="button">SHOP NIKE</button>
+          <button className="button text-sm sm:text-base">SHOP NIKE</button>
 
           <div className="font-medium text-[20px] py-3">FAQs</div>
           <div className="font-bold pt-3">
@@ -162,6 +163,7 @@ export default function Contact() {
           <div>Find Nike retail stores near you</div>
         </div>
       </div>
+      
 
       <Footer/>
     </>

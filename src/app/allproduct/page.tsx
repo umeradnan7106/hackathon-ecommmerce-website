@@ -5,14 +5,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-// import {
-//   Sheet,
-//   SheetTrigger,
-//   SheetContent,
-//   SheetHeader,
-//   SheetTitle,
-//   SheetDescription,
-// } from "@/components/ui/sheet";
 
 import { Checkbox } from "@/components/ui/checkbox";
 // import { Primitive } from "@radix-ui/react-primitive";
@@ -325,84 +317,7 @@ export default function AllProducts() {
               ></Image>
             </div>
 
-            {/* responsive */}
-
-            {/* <Sheet>
-              <SheetTrigger className="block lg:hidden">Open</SheetTrigger>
-              <SheetContent side={"left"}>
-                <SheetHeader>
-                  <SheetTitle>All Products Name</SheetTitle>
-
-                  <SheetDescription>
-                  <Primitive.div id="radix-:Rec..." className="text-sm te..." ref={null}>
-                    <div className="text-sm text-gray-600">
-                      <div className="flex">
-                        <div className="w-[192px]">
-                          <div className="border-b border-b-gray-300 pb-6">
-                            <div className="sidebar">Shoes</div>
-                            <div className="sidebar">Sports Bras</div>
-                            <div className="sidebar">Tops & T-Shirts</div>
-                            <div className="sidebar">Hoodies & Sweatshirts</div>
-                            <div className="sidebar">Jackets</div>
-                            <div className="sidebar">Trousers & Tights</div>
-                            <div className="sidebar">Shorts</div>
-                            <div className="sidebar">Tracksuits</div>
-                            <div className="sidebar">Jumpsuits & Rompers</div>
-                            <div className="sidebar">Skirts & Dresses</div>
-                            <div className="sidebar">Socks</div>
-                            <div className="sidebar">
-                              Accessories & Equipment
-                            </div>
-                          </div>
-
-                          <Accordion type="single" collapsible>
-                            <AccordionItem value="item-1">
-                              <AccordionTrigger>Gender</AccordionTrigger>
-                              <AccordionContent>
-                              <p><Checkbox />Men</p>
-                              </AccordionContent>
-                              <AccordionContent>
-                              <p><Checkbox />Women</p>
-                              </AccordionContent>
-                              <AccordionContent>
-                              <p><Checkbox /> Unisex</p>
-                              </AccordionContent>
-                            </AccordionItem>
-                          </Accordion>
-
-                          <Accordion type="single" collapsible>
-                            <AccordionItem value="item-1">
-                              <AccordionTrigger>Kids</AccordionTrigger>
-                              <AccordionContent>
-                                <p><Checkbox /> Boys</p>
-                              </AccordionContent>
-                              <AccordionContent>
-                                <p><Checkbox /> Girls</p>
-                              </AccordionContent>
-                            </AccordionItem>
-                          </Accordion>
-
-                          <Accordion type="single" collapsible>
-                            <AccordionItem value="item-1">
-                              <AccordionTrigger>Shop By Price</AccordionTrigger>
-                              <AccordionContent>
-                                <p><Checkbox /> Under ₹ 2 500.00</p>
-                              </AccordionContent>
-                              <AccordionContent>
-                                <p><Checkbox /> ₹ 2 501.00 - ₹ 7 500.00</p>
-                              </AccordionContent>
-                            </AccordionItem>
-                          </Accordion>
-                        </div>
-                      </div>
-                    </div>
-                    </Primitive.div>
-                  </SheetDescription>
-                </SheetHeader>
-              </SheetContent>
-            </Sheet> */}
-
-
+           
           </div>
         </div>
 
