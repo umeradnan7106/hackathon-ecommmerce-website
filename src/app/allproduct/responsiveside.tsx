@@ -1,122 +1,90 @@
-// import {
-//   Accordion,
-//   AccordionContent,
-//   AccordionItem,
-//   AccordionTrigger,
-// } from "@/components/ui/accordion";
+import sidebar from "../../../public/image/icons8-sidebar-100.png"
 
-// import {
-//   Sheet,
-//   SheetTrigger,
-//   SheetContent,
-//   SheetHeader,
-//   SheetTitle,
-//   SheetDescription,
-// } from "@/components/ui/sheet";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
-// import { Checkbox } from "@radix-ui/react-checkbox";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 
-// export default function ResponsiveSidebar() {
-//   return (
-//     <>
-//       {/* responsive */}
+import { Checkbox } from "@/components/ui/checkbox";
+import Image from "next/image";
 
-//       <Sheet>
-//         <SheetTrigger className="block lg:hidden">Open</SheetTrigger>
-//         <SheetContent side={"left"}>
-//           <SheetHeader>
-//             <SheetTitle>All Products Name</SheetTitle>
+export default function ResponsiveSidebar() {
+  return (
+    <>
+      {/* responsive */}
 
-//             <SheetDescription>
-//               <SheetDescription className="text-sm text-gray-600">
-//                 <SheetDescription className="flex">
-//                   <SheetDescription className="w-[192px]">
-//                     <SheetDescription className="border-b border-b-gray-300 pb-6">
-//                       <SheetDescription className="sidebar">
-//                         Shoes
-//                       </SheetDescription>
-//                       <SheetDescription className="sidebar">
-//                         Sports Bras
-//                       </SheetDescription>
-//                       <SheetDescription className="sidebar">
-//                         Tops & T-Shirts
-//                       </SheetDescription>
-//                       <SheetDescription className="sidebar">
-//                         Hoodies & Sweatshirts
-//                       </SheetDescription>
-//                       <SheetDescription className="sidebar">
-//                         Jackets
-//                       </SheetDescription>
-//                       <SheetDescription className="sidebar">
-//                         Trousers & Tights
-//                       </SheetDescription>
-//                       <SheetDescription className="sidebar">
-//                         Shorts
-//                       </SheetDescription>
-//                       <SheetDescription className="sidebar">
-//                         Tracksuits
-//                       </SheetDescription>
-//                       <SheetDescription className="sidebar">
-//                         Jumpsuits & Rompers
-//                       </SheetDescription>
-//                       <SheetDescription className="sidebar">
-//                         Skirts & Dresses
-//                       </SheetDescription>
-//                       <SheetDescription className="sidebar">
-//                         Socks
-//                       </SheetDescription>
-//                       <SheetDescription className="sidebar">
-//                         Accessories & Equipment
-//                       </SheetDescription>
-//                     </SheetDescription>
+      <Sheet>
+        <SheetTrigger className="block lg:hidden"><Image src={sidebar} alt="sidebar" width={25}></Image></SheetTrigger>
+        <SheetContent side={"left"}>
+          <SheetHeader>
+            <SheetTitle>All Products Name</SheetTitle>
+            
+              <SheetDescription className="self-start text-[16px]">Shoes</SheetDescription>
+              <SheetDescription className="self-start text-[16px]">Sports Bras</SheetDescription>
+              <SheetDescription className="self-start text-[16px]">Tops & T-Shirts</SheetDescription>
+              <SheetDescription className="self-start text-[16px]">Hoodies & Sweatshirts</SheetDescription>
+              <SheetDescription className="self-start text-[16px]">Jackets</SheetDescription>
+              <SheetDescription className="self-start text-[16px]">Trousers & Tights</SheetDescription>
+              <SheetDescription className="self-start text-[16px]">Shorts</SheetDescription>
+              <SheetDescription className="self-start text-[16px]">Tracksuits</SheetDescription>
+              <SheetDescription className="self-start text-[16px]">Jumpsuits & Rompers</SheetDescription>
+              <SheetDescription className="self-start text-[16px]">Skirts & Dresses</SheetDescription>
+              <SheetDescription className="self-start text-[16px]">Socks</SheetDescription>
+              <SheetDescription className="self-start text-[16px]">Accessories & Equipment</SheetDescription>
 
-//                     <Accordion type="single" collapsible>
-//                       <AccordionItem value="item-1">
-//                         <AccordionTrigger>Gender</AccordionTrigger>
-//                         <AccordionContent>
-//                           <Checkbox />
-//                           Men
-//                         </AccordionContent>
-//                         <AccordionContent>
-//                           <Checkbox />
-//                           Women
-//                         </AccordionContent>
-//                         <AccordionContent>
-//                           <Checkbox /> Unisex
-//                         </AccordionContent>
-//                       </AccordionItem>
-//                     </Accordion>
+              <Accordion type="single" collapsible>
+                      <AccordionItem value="item-1">
+                        <AccordionTrigger>Gender</AccordionTrigger>
+                        <AccordionContent className="place-self-start">
+                          <Checkbox /> Men
+                        </AccordionContent>
+                        <AccordionContent className="place-self-start">
+                          <Checkbox /> Women
+                        </AccordionContent>
+                        <AccordionContent className="place-self-start">
+                          <Checkbox /> Unisex
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
 
-//                     <Accordion type="single" collapsible>
-//                       <AccordionItem value="item-1">
-//                         <AccordionTrigger>Kids</AccordionTrigger>
-//                         <AccordionContent>
-//                           <Checkbox /> Boys
-//                         </AccordionContent>
-//                         <AccordionContent>
-//                           <Checkbox /> Girls
-//                         </AccordionContent>
-//                       </AccordionItem>
-//                     </Accordion>
+                    <Accordion type="single" collapsible>
+                      <AccordionItem value="item-1">
+                        <AccordionTrigger>Kids</AccordionTrigger>
+                        <AccordionContent className="place-self-start">
+                          <Checkbox /> Boys
+                        </AccordionContent>
+                        <AccordionContent className="place-self-start">
+                          <Checkbox /> Girls
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
 
-//                     <Accordion type="single" collapsible>
-//                       <AccordionItem value="item-1">
-//                         <AccordionTrigger>Shop By Price</AccordionTrigger>
-//                         <AccordionContent>
-//                           <Checkbox /> Under ₹ 2 500.00
-//                         </AccordionContent>
-//                         <AccordionContent>
-//                           <Checkbox /> ₹ 2 501.00 - ₹ 7 500.00
-//                         </AccordionContent>
-//                       </AccordionItem>
-//                     </Accordion>
-//                   </SheetDescription>
-//                 </SheetDescription>
-//               </SheetDescription>
-//             </SheetDescription>
-//           </SheetHeader>
-//         </SheetContent>
-//       </Sheet>
-//     </>
-//   );
-// }
+                    <Accordion type="single" collapsible>
+                      <AccordionItem value="item-1">
+                        <AccordionTrigger>Shop By Price</AccordionTrigger>
+                        <AccordionContent className="place-self-start">
+                          <Checkbox /> Under ₹ 2 500.00
+                        </AccordionContent>
+                        <AccordionContent className="place-self-start">
+                          <Checkbox /> ₹ 2 501.00 - ₹ 7 500.00
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+
+          </SheetHeader>
+        </SheetContent>
+      </Sheet>
+    </>
+  );
+}

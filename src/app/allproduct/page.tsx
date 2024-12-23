@@ -1,3 +1,5 @@
+import ResponsiveSidebar from "./responsiveside";
+
 import {
   Accordion,
   AccordionContent,
@@ -316,6 +318,7 @@ export default function AllProducts() {
               ></Image>
             </div>
 
+           <ResponsiveSidebar/>
            
           </div>
         </div>
