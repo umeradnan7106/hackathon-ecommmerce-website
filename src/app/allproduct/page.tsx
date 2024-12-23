@@ -7,7 +7,6 @@ import {
 
 
 import { Checkbox } from "@/components/ui/checkbox";
-// import { Primitive } from "@radix-ui/react-primitive";
 
 import Image from "next/image";
 import Header from "../header";
