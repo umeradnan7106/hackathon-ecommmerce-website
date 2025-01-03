@@ -1,14 +1,20 @@
 import "./globals.css";
+import { CartProvider } from "../CartContext/CartContext";
+import { ReactNode } from "react";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const metadata = {
+  title: "My Next.js App",
+  description: "E-commerce application with cart functionality",
+};
+
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html>
       <body>
-        {children}
+        <CartProvider>
+          {children}
+        </CartProvider>
       </body>
     </html>
   );

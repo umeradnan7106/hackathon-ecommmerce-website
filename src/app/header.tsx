@@ -1,12 +1,16 @@
+"use client";
 import Image from "next/image";
+
 import {
   Sheet,
   SheetContent,
-  // SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+
+
+import { useCart } from "../CartContext/CartContext";
 import basket from "../../public/image/Frame (1).png";
 import Logo from "../../public/image/Frame.png";
 import heart from "../../public/image/Auto Layout Horizontal (1).png";
@@ -16,6 +20,12 @@ import hamburger from "../../public/image/3844437_hamburger_list_menu_more_navig
 import Link from "next/link";
 
 export default function Header() {
+
+  const { getTotalQuantity } = useCart(); // Get the total quantity
+
+  const totalQuantity = getTotalQuantity(); // Get the total quantity
+
+
   return (
     <>
       <div className="bg-[#E5E5E5]">
@@ -86,8 +96,13 @@ export default function Header() {
             </div>
 
             <Image src={heart} alt="heart" className="w-8"></Image>
-            <Image src={shop} alt="shop" className="w-8"></Image>
-            <div className="sm:hidden">
+            <div>
+            <div className="ml-[18px] mt-[10px] text-[15px] text-red-700 font-semibold">{totalQuantity}</div>
+            <Link href={`../cart`}><Image src={shop} alt="shop" className="w-[44px] -mt-[35px]"></Image></Link>
+            
+            </div>
+
+            <div className="sm:hidden mt-1">
             <Sheet>
               <SheetTrigger>
                 <Image

@@ -3,6 +3,7 @@ import Image from "next/image";
 import shoe1 from "../../public/image/shoe1.png";
 import shoe2 from "../../public/image/shoe2.png";
 import arrow from "../../public/image/arrow2.png";
+import Link from "next/link";
 
 export default function Product() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -86,7 +87,7 @@ export default function Product() {
               style={{ width: "370px" }}
             >
               <div className="bestSellingBox">
-                <div className="addToCartOverlay">View Full Details</div>
+                <div className="addToCartOverlay"><Link href={`../allproduct`}>View Product Page</Link></div>
                 <Image src={card.image} alt={card.title} className="mainImage" />
               </div>
               <div className="flex justify-between text-[15px] font-medium py-2">
