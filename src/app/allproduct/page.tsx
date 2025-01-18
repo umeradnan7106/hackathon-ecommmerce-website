@@ -1,5 +1,9 @@
+"use client";
+
 import ResponsiveSidebar from "./responsiveside";
 import Product from "../../app/allproduct/product";
+import Image from "next/image";
+
 
 import {
   Accordion,
@@ -8,10 +12,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-
 import { Checkbox } from "@/components/ui/checkbox";
 
-import Image from "next/image";
 import Header from "../header";
 import Footer from "../footer";
 import downArrow from "../../../public/image/down-arrow.png";
@@ -31,7 +33,7 @@ export default function AllProducts() {
                 src={filter}
                 alt="filter"
                 className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] ml-1"
-              ></Image>
+                ></Image>
             </div>
             <div className="flex items-center text-[14px] sm:text-[18px]">
               Sort By{" "}
@@ -39,11 +41,11 @@ export default function AllProducts() {
                 src={downArrow}
                 alt="downArrow"
                 className="w-[14px] h-[14px] mt-1 ml-1"
-              ></Image>
+                ></Image>
             </div>
 
            <ResponsiveSidebar/>
-           
+
           </div>
         </div>
 
@@ -118,3 +120,26 @@ export default function AllProducts() {
     </>
   );
 }
+
+
+
+// import { client } from "@/sanity/lib/client";
+// import { urlFor } from "@/sanity/lib/image";
+
+// export default async function AllProducts() {
+  //   const products = await client.fetch(`*[_type == "product"]`);
+  
+  //   console.log(products);
+  
+  //   return (
+    //     <div>
+    //       <h1>My Products</h1>
+    //       {products.map((product: any) => (
+      //         <div key={product._id}>
+      //           <h2>{product.productName}</h2>
+      //           <Image src={urlFor(product.image).url()} alt={product.productName} width={20} height={20}></Image>
+      //         </div>
+//       ))}
+//     </div>
+//   );
+// }
