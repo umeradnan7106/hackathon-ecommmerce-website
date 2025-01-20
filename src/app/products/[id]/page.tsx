@@ -120,4 +120,3 @@ const handleAddToCart = () => {
 };
 
 export default ProductDetails;
-

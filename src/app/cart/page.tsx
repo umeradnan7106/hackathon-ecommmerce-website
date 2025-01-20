@@ -1,9 +1,10 @@
 "use client";
-
 import Image from "next/image";
 import Header from "@/app/header";
 import Footer from "@/app/footer";
 import { useCart } from "../../CartContext/CartContext";
+
+
 
 const formatPrice = (price: number) =>
   new Intl.NumberFormat("en-IN", {
@@ -11,9 +12,9 @@ const formatPrice = (price: number) =>
     currency: "INR",
   }).format(price);
 
+
 const AddToCartPage = () => {
   const { cart, setCart, removeFromCart } = useCart();
-
   const updateQuantity = (id: number, increment: boolean) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
@@ -34,22 +35,20 @@ const AddToCartPage = () => {
   return cart.reduce((total, item) => {
     const price = item.price; // Assume price is already a number
     const quantity = item.quantity; // Quantity is already a number
-
     // Validate both price and quantity
     if (isNaN(price) || isNaN(quantity)) {
       console.warn("Invalid price or quantity for item:", item);
       return total;
     }
-
     console.log(`Processing item: ${item.title}, Price: ${price}, Quantity: ${quantity}`);
     return total + price * quantity;
   }, 0);
 };
 
+
   return (
     <>
       <Header />
-
       <div className="max-w-[1100px] mx-auto flex gap-5 my-4 flex-wrap justify-center">
         <div className="w-[733px]">
           <div className="bg-[#F7F7F7] p-3">
@@ -103,9 +102,7 @@ const AddToCartPage = () => {
               ))
             )}
           </div>
-
         </div>
-
         {/* Summary Section */}
         <div>
           <div className="text-[21px] font-medium mb-5">Summary</div>
@@ -126,10 +123,8 @@ const AddToCartPage = () => {
           </div>
         </div>
       </div>
-
       <Footer />
     </>
   );
 };
-
 export default AddToCartPage;
