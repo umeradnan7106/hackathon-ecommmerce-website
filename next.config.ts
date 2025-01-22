@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
       }
     ]
   },
+  env: {
+    NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  },
 };
 
 export default nextConfig;
