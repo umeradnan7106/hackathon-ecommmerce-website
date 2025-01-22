@@ -1,7 +1,7 @@
 "use client";
 
 import ResponsiveSidebar from "./responsiveside";
-import Product from "../../app/allproduct/product";
+import Product from "../../app/allproduct/sanityProduct";
 import Image from "next/image";
 
 

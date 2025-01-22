@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/sheet";
 
 
-import { useCart } from "../CartContext/CartContext";
+// import { useCart } from "../CartContext/CartContext";
 import basket from "../../public/image/Frame (1).png";
 import Logo from "../../public/image/Frame.png";
 import heart from "../../public/image/Auto Layout Horizontal (1).png";
@@ -21,9 +21,9 @@ import Link from "next/link";
 
 export default function Header() {
 
-  const { getTotalQuantity } = useCart(); // Get the total quantity
+  // const { getTotalQuantity } = useCart(); // Get the total quantity
 
-  const totalQuantity = getTotalQuantity(); // Get the total quantity
+  // const totalQuantity = getTotalQuantity(); // Get the total quantity
 
 
   return (
@@ -97,8 +97,8 @@ export default function Header() {
 
             <Image src={heart} alt="heart" className="w-8"></Image>
             <div>
-            <div className="ml-[18px] mt-[10px] text-[15px] text-red-700 font-semibold">{totalQuantity}</div>
-            <Link href={`../cart`}><Image src={shop} alt="shop" className="w-[44px] -mt-[35px]"></Image></Link>
+            <div className="ml-[18px] mt-[10px] text-[15px] text-red-700 font-semibold"></div>
+            <Link href={`../cart`}><Image src={shop} alt="shop" className="w-[40px] -mt-[12px]"></Image></Link>
             
             </div>
 

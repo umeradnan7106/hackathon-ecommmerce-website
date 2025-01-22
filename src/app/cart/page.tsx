@@ -79,14 +79,14 @@ const AddToCartPage = () => {
                     <div className="flex items-center mt-2">
                       <button
                         className="px-2 py-1 bg-gray-200 text-gray-800 rounded-md mr-2"
-                        onClick={() => updateQuantity(item.id, false)}
+                        onClick={() => updateQuantity(Number(item.id), false)}
                       >
                         −
                       </button>
                       <span>{item.quantity}</span>
                       <button
                         className="px-2 py-1 bg-gray-200 text-gray-800 rounded-md ml-2"
-                        onClick={() => updateQuantity(item.id, true)}
+                        onClick={() => updateQuantity(Number(item.id), true)}
                       >
                         +
                       </button>
