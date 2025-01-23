@@ -13,7 +13,7 @@ const product = defineType({
     {
       name: "slug",
       type: "slug",
-      title: "slug",
+      title: "Slug",
       options: {
         source: "productName"
       }

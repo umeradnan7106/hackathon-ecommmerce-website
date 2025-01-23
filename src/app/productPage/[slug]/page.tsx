@@ -1,4 +1,4 @@
-import { client } from "@/sanity/lib/client";
+import { client } from "../../../sanity/lib/client";
 import { Product } from "../../../../type/products";
 import { groq } from "next-sanity";
 import Header from "@/app/header";
