@@ -11,14 +11,6 @@ const product = defineType({
       type: 'string',
     },
     {
-      name: "slug",
-      type: "slug",
-      title: "Slug",
-      options: {
-        source: "productName"
-      }
-    },
-    {
       name: 'category',
       title: 'Category',
       type: 'string',
@@ -34,8 +26,8 @@ const product = defineType({
       type: 'number',
     },
     {
-      name: 'colors',
-      title: 'Colors',
+      name: 'color',
+      title: 'Color',
       type: 'array',
       of: [{ type: 'string' }],
     },

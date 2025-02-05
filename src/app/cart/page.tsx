@@ -1,10 +1,11 @@
 "use client";
+
 import Image from "next/image";
 import Header from "@/app/header";
 import Footer from "@/app/footer";
 import { useCart } from "../../CartContext/CartContext";
-
-
+import { urlFor } from "@/sanity/lib/image";
+import Link from "next/link";
 
 const formatPrice = (price: number) =>
   new Intl.NumberFormat("en-IN", {
@@ -12,13 +13,12 @@ const formatPrice = (price: number) =>
     currency: "INR",
   }).format(price);
 
-
 const AddToCartPage = () => {
   const { cart, setCart, removeFromCart } = useCart();
-  const updateQuantity = (id: number, increment: boolean) => {
+  const updateQuantity = (id: string, increment: boolean) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
-        item.id === id
+        item._id === id
           ? {
               ...item,
               quantity: increment
@@ -31,20 +31,21 @@ const AddToCartPage = () => {
   };
 
   const calculateTotal = () => {
-  console.log("Cart items:", cart);
-  return cart.reduce((total, item) => {
-    const price = item.price; // Assume price is already a number
-    const quantity = item.quantity; // Quantity is already a number
-    // Validate both price and quantity
-    if (isNaN(price) || isNaN(quantity)) {
-      console.warn("Invalid price or quantity for item:", item);
-      return total;
-    }
-    console.log(`Processing item: ${item.title}, Price: ${price}, Quantity: ${quantity}`);
-    return total + price * quantity;
-  }, 0);
-};
-
+    console.log("Cart items:", cart);
+    return cart.reduce((total, item) => {
+      const price = item.price; // Assume price is already a number
+      const quantity = item.quantity; // Quantity is already a number
+      // Validate both price and quantity
+      if (isNaN(price) || isNaN(quantity)) {
+        console.warn("Invalid price or quantity for item:", item);
+        return total;
+      }
+      console.log(
+        `Processing item: ${item.productName}, Price: ${price}, Quantity: ${quantity}`
+      );
+      return total + price * quantity;
+    }, 0);
+  };
 
   return (
     <>
@@ -66,34 +67,37 @@ const AddToCartPage = () => {
               </div>
             ) : (
               cart.map((item) => (
-                <div key={item.id} className="flex gap-2 border-b border-[#E5E5E5] pb-5 pt-2">
+                <div
+                  key={item._id}
+                  className="flex gap-2 border-b border-[#E5E5E5] pb-5 pt-2"
+                >
                   <Image
-                    src={item.image || "/fallback-image.png"}
-                    alt={item.title || "Product Image"}
+                    src={urlFor(item.image).url()}
+                    alt={item.productName}
                     width={150}
                     height={150}
                   />
                   <div>
-                    <div className="text-[15px] mt-1">{item.title}</div>
+                    <div className="text-[15px] mt-1">{item.productName}</div>
                     <div>MRP: ₹{item.price}</div>
                     <div className="flex items-center mt-2">
                       <button
                         className="px-2 py-1 bg-gray-200 text-gray-800 rounded-md mr-2"
-                        onClick={() => updateQuantity(Number(item.id), false)}
+                        onClick={() => updateQuantity(item._id, false)}
                       >
                         −
                       </button>
                       <span>{item.quantity}</span>
                       <button
                         className="px-2 py-1 bg-gray-200 text-gray-800 rounded-md ml-2"
-                        onClick={() => updateQuantity(Number(item.id), true)}
+                        onClick={() => updateQuantity(item._id, true)}
                       >
                         +
                       </button>
                     </div>
                     <button
                       className="mt-2 cursor-pointer text-red-500"
-                      onClick={() => removeFromCart(item.id)}
+                      onClick={() => removeFromCart(item._id)}
                     >
                       Remove
                     </button>
@@ -103,6 +107,8 @@ const AddToCartPage = () => {
             )}
           </div>
         </div>
+
+        
         {/* Summary Section */}
         <div>
           <div className="text-[21px] font-medium mb-5">Summary</div>
@@ -118,9 +124,12 @@ const AddToCartPage = () => {
             <div>Total</div>
             <div>{formatPrice(calculateTotal())}</div>
           </div>
-          <div className="bg-[#111111] text-[#FFFFFF] py-[18px] text-center rounded-full my-8">
-            Member Checkout
-          </div>
+
+          <Link href="/checkout">
+            <div className="bg-[#111111] text-[#FFFFFF] py-[18px] text-center rounded-full my-8">
+              Checkout
+            </div>
+          </Link>
         </div>
       </div>
       <Footer />

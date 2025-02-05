@@ -1,22 +1,13 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+// next.config.js
+const nextConfig = {
   images: {
+    domains: ['lh3.googleusercontent.com'], // Allow Google images
     remotePatterns: [
       {
-        hostname: "cdn.sanity.io"
-      }
-    ]
-  },
-  env: {
-    NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
-    NEXT_PUBLIC_SANITY_PROJECT_ID: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-    
+        hostname: "cdn.sanity.io", // Allow images from Sanity
+      },
+    ],
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

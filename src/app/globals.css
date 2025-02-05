@@ -6,6 +6,11 @@
   padding: 10px;
   font-size: 11px;
 }
+.navButton2{
+  padding: 5px;
+  font-size: 10px;
+  margin: 2px 0;
+}
 
 .hoverUnderline{
   font-weight: 500;
@@ -29,6 +34,7 @@
   font-size: 10px;
   color: white;
   padding: 10px 0px;
+  margin-left: 10px;
 }
 
 .footerText2{

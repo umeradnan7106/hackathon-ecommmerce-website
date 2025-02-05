@@ -1,8 +1,8 @@
-export interface Product {
+export interface ProductType {
     _id: string;
     productName: string;
     _type: "product";
-    image?: {
+    image: {
         asset : {
             _ref: string;
             _type: "image";
@@ -12,8 +12,8 @@ export interface Product {
     category: string;
     inventory: number;
     status: string;
-    description?: string;
-    color?: string;
+    description: string;
+    colors?: string[]
     slug: {
         _type: "slug",
         current: string,

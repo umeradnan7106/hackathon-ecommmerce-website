@@ -14,6 +14,7 @@ export default function Contact() {
   return (
     <>
     <Header/>
+    
       <div className="justify-items-center">
         <div className="text-[32px] font-medium py-3">GET HELP</div>
         <div>

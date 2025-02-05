@@ -1,10 +1,13 @@
+// Data Fetching with API with string ID 
+
 "use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+
 interface ProductInfo {
-  id: number;
+  _id: string;
   image: string;
   label: string;
   title: string;
@@ -28,7 +31,7 @@ const ProductPage = () => {
     fetchProducts();
   }, []);
 
-  const handleViewDetails = (id: number) => {
+  const handleViewDetails = (id: string) => {
     router.push(`/products/${id}`);
   };
 
@@ -36,11 +39,11 @@ const ProductPage = () => {
     <div className="w-[1092px] py-5">
       <div className="flex flex-wrap gap-2 justify-center">
         {products.map((product) => (
-          <div className="w-[348px]" key={product.id}>
+          <div className="w-[348px]" key={product._id}>
             <div className="bestSellingBox">
               <div
                 className="addToCartOverlay"
-                onClick={() => handleViewDetails(product.id)}
+                onClick={() => handleViewDetails(product._id)}
               >
                 View Full Details
               </div>
