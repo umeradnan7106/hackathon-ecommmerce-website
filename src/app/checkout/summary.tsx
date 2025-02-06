@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useCart } from "../../CartContext/CartContext";
 import { urlFor } from "@/sanity/lib/image";
+import { useEffect } from "react";
 
 
 const formatPrice = (price: number) =>
@@ -44,6 +45,16 @@ const AddToCartPage = () => {
       return total + price * quantity;
     }, 0);
   };
+
+  const exportTotalPrice = (total: number) => {
+    // Logic to export the total price to another file or service
+    console.log("Exporting total price:", total);
+  };
+
+  useEffect(() => {
+    const total = calculateTotal();
+    exportTotalPrice(total);
+  }, [cart]);
 
 
   return (

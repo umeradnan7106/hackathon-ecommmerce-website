@@ -1,6 +1,10 @@
 "use server";
 
 import Stripe from "stripe";
+import exportTotalPrice from "./summary"
+
+const totalPrice: number = Number(exportTotalPrice);
+
 
 export async function createPaymentIntent() {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
@@ -8,7 +12,7 @@ export async function createPaymentIntent() {
   });
   try {
     // You can hardcode an amount here, e.g. $20 = 2000 in cents
-    const amount = 200 * 100; 
+    const amount = totalPrice * 100; 
 
 
     const paymentIntent = await stripe.paymentIntents.create({
